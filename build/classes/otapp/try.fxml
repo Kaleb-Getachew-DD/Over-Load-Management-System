@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otapp.chatgpt">
+   <children>
+      <TabPane layoutY="30.0" prefHeight="619.0" prefWidth="1114.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="ADD USER">
+               <content>
+                  <StackPane prefHeight="600.0" prefWidth="1100.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="350.0" layoutY="151.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <AnchorPane prefHeight="600.0" prefWidth="342.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <AnchorPane layoutX="17.0" layoutY="8.0" prefHeight="582.0" prefWidth="313.0" styleClass="border" AnchorPane.bottomAnchor="9.599999999999909" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="8.0">
+                                             <children>
+                                                <Label layoutX="26.0" layoutY="82.0" text="Full Name">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_fullname" layoutX="26.0" layoutY="112.0" prefHeight="20.0" prefWidth="220.0" promptText="Name" />
+                                                <Label layoutX="28.0" layoutY="146.0" text="Department">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_department" layoutX="26.0" layoutY="177.0" prefHeight="20.0" prefWidth="220.0" promptText="Department" />
+                                                <Label layoutX="28.0" layoutY="210.0" text="Gender">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="user_gender" layoutX="29.0" layoutY="239.0" onAction="#userGenderList" prefHeight="20.0" prefWidth="220.0" promptText="Select Gender" />
+                                                <Label layoutX="28.0" layoutY="271.0" text="Salary">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_salary" layoutX="29.0" layoutY="298.0" prefHeight="20.0" prefWidth="220.0" promptText="Salary" />
+                                                <Label layoutX="29.0" layoutY="331.0" text="Current Position">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="user_position" layoutX="29.0" layoutY="353.0" onAction="#userPositionList" prefHeight="20.0" prefWidth="220.0" promptText="Select Position" />
+                                                <Label layoutX="28.0" layoutY="390.0" text="Username">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_username" layoutX="26.0" layoutY="419.0" prefHeight="20.0" prefWidth="220.0" promptText="Username" />
+                                                <Label layoutX="28.0" layoutY="445.0" text="Password">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <PasswordField fx:id="user_password" layoutX="29.0" layoutY="475.0" prefHeight="20.0" prefWidth="220.0" promptText="Password" />
+                                                <Button fx:id="user_addbtn" layoutX="14.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_addbtn" prefHeight="30.0" prefWidth="55.0" styleClass="btn" text="ADD" />
+                                                <Button fx:id="user_updatebtn" layoutX="81.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_updatebtn" prefHeight="30.0" prefWidth="66.0" styleClass="btn" text="Update" />
+                                                <Button fx:id="user_clearbtn" layoutX="157.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_clearbtn" prefHeight="30.0" prefWidth="55.0" styleClass="btn" text="Clear" />
+                                                <Button fx:id="user_deletebtn" layoutX="237.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_deletebtn" prefHeight="30.0" prefWidth="62.0" styleClass="btn" text="Delete" />
+                                                <Label layoutX="28.0" layoutY="22.0" text="User ID">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_id" layoutX="26.0" layoutY="50.0" prefHeight="20.0" prefWidth="220.0" promptText="User ID" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Separator layoutX="334.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </left>
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <AnchorPane layoutX="6.0" layoutY="8.0" onMouseClicked="#userSelectData" prefHeight="583.0" prefWidth="738.0" AnchorPane.bottomAnchor="8.799999999999955" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.7999999999999545" AnchorPane.topAnchor="8.0">
+                                             <children>
+                                                <TableView fx:id="user_tableView" layoutX="8.0" layoutY="10.0" onMouseClicked="#userSelectedData" prefHeight="562.0" prefWidth="720.0" styleClass="column-header">
+                                                   <columns>
+                                                      <TableColumn fx:id="user_col_id" prefWidth="50.40002155303955" text="ID" />
+                                                      <TableColumn fx:id="user_col_fullname" prefWidth="175.99999618530273" text="Full Name" />
+                                                      <TableColumn fx:id="user_col_gender" prefWidth="52.80000305175781" text="Gender" />
+                                                      <TableColumn fx:id="user_col_department" prefWidth="128.79998779296875" text="Department" />
+                                                      <TableColumn fx:id="user_col_position" prefWidth="96.7999267578125" text="Position" />
+                                                      <TableColumn fx:id="user_col_salary" prefWidth="68.79986572265625" text="Salary" />
+                                                      <TableColumn fx:id="user_col_username" prefWidth="134.4000244140625" text="Username" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <stylesheets>
+      <URL value="@AdminDesign.css" />
+   </stylesheets>
+</AnchorPane>

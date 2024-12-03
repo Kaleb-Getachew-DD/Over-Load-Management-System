@@ -1,0 +1,72 @@
+.white-form{
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+}
+
+.border{
+    -fx-border-color: linear-gradient(to bottom right, #9e20a0, #5a3375);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+.btn{
+    -fx-background-color: linear-gradient(to bottom right, #9e20a0, #5a3375);
+    -fx-text-fill: #fff;
+    -fx-font-size:14px;
+    -fx-cursor: hand;
+}
+.btn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #a914ae, #7f4fa4);
+}
+.table-view{
+    -fx-padding: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #9e20a0, #5a3375);
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+}
+.table-view .column-header{
+    -fx-alighment: center;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right, #9e20a0, #5a3375);
+    -fx-text-fill: #fff;
+    -fx-font-family: arial;
+    -fx-background-radius:8px 8px 0 0;
+    -fx-background-inset: 0 0 0 0;
+
+}
+.table-view .column-header,  .filter{
+    -fx-background-color: transparent;
+    -fx-size:50px;
+}
+
+.table-view .column-header  .label{
+    -fx-text-fill: #fff;
+    -fx-font-family:arial;
+}
+
+
+
+.table-view .table-row-cell {
+    -fx-font-family: "Bell MT";   
+    -fx-font-size: 14px; 
+    -fx-padding: 10px 0;   
+    -fx-background-color: #f2f2f2;   
+    -fx-background-radius: 5px;  
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);   
+}
+
+
+.table-view .table-cell {
+    -fx-padding: 10px;  
+    -fx-background-color: transparent;  
+}
+
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e0e0e0;  
+}
+.table-view .table-row-cell:selected {
+    -fx-background-color: orange;  
+    -fx-text-fill: black;   
+}

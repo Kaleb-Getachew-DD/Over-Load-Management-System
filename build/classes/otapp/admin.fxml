@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="otapp.AdminMainController">
+   <children>
+      <TabPane layoutY="30.0" prefHeight="619.0" prefWidth="1114.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="ADD USER">
+               <content>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="350.0" layoutY="151.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <AnchorPane prefHeight="600.0" prefWidth="342.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <AnchorPane layoutX="17.0" layoutY="8.0" prefHeight="582.0" prefWidth="313.0" styleClass="border" AnchorPane.bottomAnchor="9.599999999999909" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="8.0">
+                                             <children>
+                                                <Label layoutX="26.0" layoutY="82.0" text="Full Name">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_fullname" layoutX="26.0" layoutY="112.0" prefHeight="20.0" prefWidth="220.0" promptText="Name" />
+                                                <Label layoutX="28.0" layoutY="146.0" prefHeight="22.0" prefWidth="78.0" text="Deprtment">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="28.0" layoutY="210.0" text="Gender">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="user_gender" layoutX="29.0" layoutY="239.0" prefHeight="20.0" prefWidth="220.0" promptText="Select Gender" />
+                                                <TextField fx:id="user_department" layoutX="26.0" layoutY="177.0" prefHeight="20.0" prefWidth="220.0" promptText="Department" />
+                                                <Label layoutX="28.0" layoutY="271.0" prefHeight="14.0" prefWidth="78.0" text="Salary">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_salary" layoutX="29.0" layoutY="298.0" prefHeight="20.0" prefWidth="220.0" promptText="Salary" />
+                                                <Label layoutX="29.0" layoutY="331.0" text="Current Position">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="user_position" layoutX="29.0" layoutY="353.0" prefHeight="20.0" prefWidth="220.0" promptText="Select Position" />
+                                                <Label layoutX="28.0" layoutY="390.0" prefHeight="16.0" prefWidth="78.0" text="Username">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_username" layoutX="26.0" layoutY="419.0" prefHeight="20.0" prefWidth="220.0" promptText="username" />
+                                                <Label layoutX="28.0" layoutY="445.0" prefHeight="22.0" prefWidth="78.0" text="Password">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_password" layoutX="29.0" layoutY="475.0" prefHeight="20.0" prefWidth="220.0" promptText="password" />
+                                                <Button fx:id="user_addbtn" layoutX="14.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_addbtn" prefHeight="30.0" prefWidth="55.0" styleClass="btn" stylesheets="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" text="ADD" AnchorPane.bottomAnchor="33.00000000000009" />
+                                                <Button fx:id="user_updatebtn" layoutX="81.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_updatebtn" prefHeight="30.0" prefWidth="66.0" styleClass="btn" text="Update" AnchorPane.bottomAnchor="33.00000000000009">
+                                                   <stylesheets>
+                                                      <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </Button>
+                                                <Button fx:id="user_clearbtn" layoutX="157.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_clearbtn" prefHeight="30.0" prefWidth="55.0" styleClass="btn" text="Clear" AnchorPane.bottomAnchor="33.00000000000009">
+                                                   <stylesheets>
+                                                      <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </Button>
+                                                <Button fx:id="user_deletebtn" layoutX="237.0" layoutY="519.0" mnemonicParsing="false" onAction="#user_deletebtn" prefHeight="30.0" prefWidth="62.0" styleClass="btn" text="Delete" AnchorPane.bottomAnchor="33.00000000000009">
+                                                   <stylesheets>
+                                                      <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </Button>
+                                                <Label layoutX="28.0" layoutY="22.0" text="User ID">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="user_id" layoutX="26.0" layoutY="50.0" prefHeight="20.0" prefWidth="220.0" promptText="User ID" />
+                                             </children>
+                                             <stylesheets>
+                                                <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                <URL value="@AdminDesign.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                          <Separator layoutX="334.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" stylesheets="@AdminDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </left>
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <AnchorPane layoutX="6.0" layoutY="8.0" onMouseClicked="#userSelectData" prefHeight="583.0" prefWidth="738.0" AnchorPane.bottomAnchor="8.799999999999955" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.7999999999999545" AnchorPane.topAnchor="8.0">
+                                             <children>
+                                                <TableView fx:id="user_tableView" layoutX="8.0" layoutY="10.0" onMouseClicked="#userSelectedData" prefHeight="562.0" prefWidth="720.0" AnchorPane.bottomAnchor="9.600000000000023" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="9.600000000000023" AnchorPane.topAnchor="10.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="user_col_id" prefWidth="83.20003700256348" text="ID" />
+                                                      <TableColumn fx:id="user_col_fullname" prefWidth="123.19995880126953" text="Full Name" />
+                                                      <TableColumn fx:id="user_col_gender" prefWidth="52.00001525878906" text="Gender" />
+                                                      <TableColumn fx:id="user_col_department" prefWidth="121.60009765625" text="Department" />
+                                                      <TableColumn fx:id="user_col_position" prefWidth="91.9998779296875" text="Position" />
+                                                      <TableColumn fx:id="user_col_salary" prefWidth="75.99984741210938" text="Salary" />
+                                                      <TableColumn fx:id="user_col_username" prefWidth="84.7999267578125" text="Username" />
+                                                      <TableColumn fx:id="user_col_password" prefWidth="86.400146484375" text="Password" />
+                                                   </columns>
+                                                   <stylesheets>
+                                                      <URL value="@AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+          <Tab text="ADD COURSE">
+               <content>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="350.0" layoutY="151.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <AnchorPane prefHeight="600.0" prefWidth="342.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="582.0" prefWidth="313.0" styleClass="border" AnchorPane.bottomAnchor="8.600000000000023" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="8.800000000000068">
+                                             <children>
+                                                <Label layoutX="28.0" layoutY="137.0" text="Course ID">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="course_id" layoutX="28.0" layoutY="165.0" prefHeight="30.0" prefWidth="220.0" />
+                                                <Label layoutX="28.0" layoutY="222.0" prefHeight="22.0" prefWidth="93.0" text="Course Name">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="28.0" layoutY="306.0" text="Credit Hour">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="course_cr" layoutX="28.0" layoutY="339.0" prefHeight="35.0" prefWidth="220.0" promptText="Select Credit Hour" />
+                                                <TextField fx:id="course_name" layoutX="28.0" layoutY="252.0" prefHeight="30.0" prefWidth="220.0" />
+                                                <Button fx:id="course_addbtn" layoutX="32.0" layoutY="455.0" mnemonicParsing="false" onAction="#course_addbtn" prefHeight="40.0" prefWidth="70.0" styleClass="btn" stylesheets="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" text="ADD" AnchorPane.bottomAnchor="89.0" />
+                                                <Button fx:id="course_updatebtn" layoutX="175.0" layoutY="456.0" mnemonicParsing="false" onAction="#course_updatebtn" prefHeight="40.0" prefWidth="70.0" styleClass="btn" text="Update" AnchorPane.bottomAnchor="90.0">
+                                                   <stylesheets>
+                                                      <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </Button>
+                                                <Button fx:id="course_clearbtn" layoutX="32.0" layoutY="518.0" mnemonicParsing="false" onAction="#course_clearbtn" prefHeight="40.0" prefWidth="70.0" styleClass="btn" text="Clear" AnchorPane.bottomAnchor="27.0">
+                                                   <stylesheets>
+                                                      <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </Button>
+                                                <Button fx:id="course_deletebtn" layoutX="175.0" layoutY="514.0" mnemonicParsing="false" onAction="#course_deletebtn" prefHeight="40.0" prefWidth="70.0" styleClass="btn" text="Delete" AnchorPane.bottomAnchor="28.40000000000009">
+                                                   <stylesheets>
+                                                      <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                      <URL value="@AdminDesign.css" />
+                                                   </stylesheets>
+                                                </Button>
+                                                <Label layoutX="64.0" layoutY="41.0" prefHeight="30.0" prefWidth="171.0" text="Register Courses">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <stylesheets>
+                                                <URL value="@../../../OverLoadManagementSystem/src/overloadmanagementsystem/AdminDesign.css" />
+                                                <URL value="@AdminDesign.css" />
+                                             </stylesheets>
+                                          </AnchorPane>
+                                          <Separator layoutX="334.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" stylesheets="@AdminDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </left>
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <AnchorPane layoutX="6.0" layoutY="8.0" onMouseClicked="#userSelectData" prefHeight="583.0" prefWidth="738.0" AnchorPane.bottomAnchor="8.799999999999955" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.7999999999999545" AnchorPane.topAnchor="8.0">
+                                             <children>
+                                                <TableView fx:id="course_tableview" layoutX="1.0" layoutY="1.0" onMouseClicked="#courseSelectedData" prefHeight="582.0" prefWidth="737.0" stylesheets="@AdminDesign.css">
+                                                  <columns>
+                                                    <TableColumn fx:id="course_col_id" prefWidth="145.60003983974457" text="Course ID" />
+                                                    <TableColumn fx:id="course_col_name" prefWidth="343.9999542236328" text="Course Name" />
+                                                      <TableColumn fx:id="course_col_cr" prefWidth="246.40005493164062" text="Credit Hour" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+            <Tab text="SCHEDULE">
+               <content>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="350.0" layoutY="151.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TableView fx:id="sch_tableview" layoutX="450.0" layoutY="146.0" prefHeight="600.0" prefWidth="1100.0" stylesheets="@AdminDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="sch_col_day" prefWidth="161.59997254610062" text="DAY" />
+                                                <TableColumn fx:id="sch_col_time" prefWidth="130.40000915527344" text="TIME" />
+                                                <TableColumn fx:id="sch_col_course" prefWidth="360.79998779296875" text="COURSE" />
+                                                <TableColumn fx:id="sch_col_instructor" prefWidth="447.20001220703125" text="INSTRUCTOR" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="542.0" text="ADMIN" textFill="#bd1bde">
+         <font>
+            <Font name="Rockwell Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToLoginBtn" layoutX="846.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleBackToLogin" prefHeight="10.0" prefWidth="140.0" text="Back To Login" textFill="#d414b1">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
